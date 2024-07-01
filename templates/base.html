@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bekmuhammad</title>
+</head>
+<body>
+
+    <nav style="background-color: #333; overflow: hidden;">
+        <a href="{% url 'home-page'%}" style="float: left; display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;">Home</a>
+        <a href="{% url 'blogs-page'%}" style="float: left; display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;">Blogs</a>
+        <a href="{% url 'resume-page'%}" style="float: left; display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;">Resume</a>
+   </nav>
+
+    {% block content %}
+    {% endblock content %}
+
+
+    <footer style="background-color: #333; color: white; text-align: center; padding: 10px 0; position: fixed; left: 0; bottom: 0; width: 100%;">
+        <p>&copy; 2024 Barcha huquqlar himoyalangan</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% for res in resume %}
+
+<div class="body">
+    <p style="font-family: Arial, Helvetica, sans-serif; margin: 20px; background-color: azure;">{{res.body}}</p>
+</div>
+{% endfor %}
+{% endblock content %}

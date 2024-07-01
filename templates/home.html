@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% for blogs in blog %}
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            border: 1px solid #ddd;
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .description {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .section-content {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Dasturchi Rezyumesi</div>
+        
+        <div class="section">
+            <div class="section-title">{{blogs.brand_name}}</div>
+            <div class="section-content">
+                <p><strong>Brend:</strong> <span id="brand-name">Dasturiy Ta'minot Brendi</span></p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Muallif</div>
+            <div class="section-content">
+                <p><strong>Muallif:</strong> <span id="author-name">{{blogs.author_name}}</span></p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Bio</div>
+            <div class="section-content">
+                <p id="bio">{{blogs.bio}}</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Github</div>
+            <div class="section-content">
+                <p><strong>Github:</strong> <a id="github" href="https://github.com/bekmuhammad-mamadiyev">My Github</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+{% endfor %}
+{% endblock content %}
